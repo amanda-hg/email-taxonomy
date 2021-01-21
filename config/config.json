@@ -1,0 +1,5 @@
+{
+    "train": false,
+    "predict": true,
+    "n_top_words": 5
+}
