@@ -2,26 +2,20 @@
 
 ## 1. Índice
 
-1. Índice
-2. Introducción
-3. Descripción
-    * 3.1 Descripción de los campos
-4. Estrutura de carpetas
-5. Parámetros
-    * 5.1 Archivo de configuración
-    * 5.2 Datos de entrada
-6. Resultados
-7. Ejecución
+1. Index
+2. Introduction
+3. Folder structure
+4. Parameters
+    * 4.1 Configuration file
+    * 4.2 Input data
+5. Results
+6. Execution
 
-## 2. Introducción
-Email Taxonomy es una aplicación que analiza y clasifica correos electrónicos.
-Email Taxonomy realiza una clasificación de correos electrónicos analizando los temas principales (topics) que se tratan en dichos correos. El algoritmo implementado para esta clasificación es el algoritmo de Latent Dirichlet Allocation (LDA).
+## 2. Introduction
+Email Taxonomy is an application that analyzes and classifies emails.
+Email Taxonomy performs a classification of emails by analyzing the main topics (topics) that are covered in these emails. The algorithm implemented for this classification is the Latent Dirichlet Allocation (LDA) algorithm.
 
-## 3. Descripción
-
-### 3.1 Descripción de los campos
-
-## 4. Estrutura de carpetas
+## 3. Folder structure
 ```python
 email-taxonomy
     |
@@ -41,38 +35,39 @@ email-taxonomy
     |-------- tmp/
 ```
 
-Para que la aplicación funcione se debe respetar esta estructura de carpetas.
+For the application to work, this folder structure must be respected.
 
-** Nota:** \
-Dentro de la carpeta tmp/ se crearán archivos de datos temporales de todas las ejecuciones por las que pasa el conjunto de datos.
+** Note:** \
+In the tmp/ folder, temporary data files will be created for all the executions the dataset goes through.
+In the model_trained/ will save the LDA model.
 
-## 5. Parámetros
+## 4. Parameters
 
-### 5.1 Archivo de configuración
+### 4.1 Configuration file
 
-El archivo `config.json`debe estar ubicado en la carpeta `config``
+The `config.json` file should be located in the `config` folder
 
-#### Variables requeridas
+#### Required variables
 
-    "train": (boolean) variable para indicar que entrene un modelo LDA
-    "predict": (boolean) variable para indicar que haga una predicción sobre ese modelo
-    "n_top_words": (integer) número de n top palabras de cada tópic.
+    "train": (boolean) variable to indicate to train an LDA model.
+    "predict": (boolean) variable to indicate to make a prediction about that model.
+    "n_top_words": (integer) number of n top words of each topic.
 
-### 5.2 Datos de entrada
+### 4.2 Input data
 
-Se requiere un archivo de entrada, un csv que contenga la informacion de correos electrónicos. En este caso:
-* **enron_05_17_2015_with_labels_v2_100K_chunk_1_of_6.csv**: dataset con los correos electrónicos de los empleados de la empresa Enron.
+An input file is required, a csv containing the email information. In this case:
+* **enron_05_17_2015_with_labels_v2_100K_chunk_1_of_6.csv**: dataset with the emails of Enron company employees.
 
-## 6. Resultados
+## 5. Results
 
-Entre los resultados, se guardan tres archivos:
-1) El modelo LDA.
-2) El modelo de Count Vectorizer
-3) Un excel con las palabras mas relevantes de cada topic.
+Among the results, three files are saved:
+1) The LDA model.
+2) The Count Vectorizer model
+3) An excel with the most relevant words of each topic.
 
-## 7. Ejecución
+## 6. Execution
 
-Para esta aplicacion se ha utilizado la versión de Python 3.8.0. Para ejecutar este proyecto, tanto solo hay situarse en la raíz del proyecto y ejecutar la siguiente línea de código:
+Python version 3.8.0 has been used for this application. To run this project, you just have to go to the root of the project and run the following line of code:
 
 ```python
 python3.8 code/main_app.py
