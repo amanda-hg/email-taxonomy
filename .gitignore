@@ -1,0 +1,8 @@
+code/__pycache__/*
+code/global_vars.py
+notebooks/.ipynb_checkpoints/*
+data/*
+logs/*
+*.log*
+tmp/nlp_model.p
+tmp.txt
