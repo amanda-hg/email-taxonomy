@@ -12,8 +12,7 @@
 6. Execution
 
 ## 2. Introduction
-Email Taxonomy is an application that analyzes and classifies emails.
-Email Taxonomy performs a classification of emails by analyzing the main topics (topics) that are covered in these emails. The algorithm implemented for this classification is the Latent Dirichlet Allocation (LDA) algorithm.
+Email Taxonomy is a natural language processing application, which is responsible for classifying emails and analyzing their main topics.
 
 ## 3. Folder structure
 ```python
